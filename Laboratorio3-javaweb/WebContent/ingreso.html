@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Formulario</title>
+
+<script>
+       function validar(){
+         var n = document.f1.nom.value;
+         var c = document.f1.clave.value;
+
+         if (n == ""){
+            alert('Ingrese nombre');
+            return false;
+         } else if( c == ""){
+            alert('Ingrese clave');
+            return false;
+         }
+         return true;
+       }
+    </script>
+    
+</head>
+<body>
+<form name="f1" action="" method="post" onSubmit="return validar();">
+  Nombre: <input type="text" name="nom"> <br/>
+  Clave: <input type="password" name="clave"> <br/>
+  <input type="submit" value="Enviar">
+</form>
+</body>
+</html>
